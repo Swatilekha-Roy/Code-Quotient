@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <!-- FA CSS -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+
+    <!-- Title -->
+    <title>CodeQuotient / Hotstar</title>
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #ffffff88 !important;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../img/logo.jpg" width="70" background= "white" text-indent= "-99999px" style="margin-left: 3%;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item nav-item-active">
+                <a class="nav-link" aria-current="page" href="#">Hotstar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <!-- Main content -->
+    <div class="main-content">
+      <div class="container" style="margin-top: 5%;">
+          <div class="row">
+              <div class="col-xs-7">
+                  <h1 class="h1-top">Hotstar Projects</h1>
+                  <p>
+                      Here, you will find a few projects. You can choose to work on any one of them. Each project has a minimum scope as well as extra credits. Regardless of the project you choose, you must finish the minimum scope of the project before you turn it in.
+                      <br><br>
+                      Here is our guidance for you to select the project based on the role you have applied for:
+                  </p>
+                  <table class="table table-hover">
+                      <thead>
+                        <tr style="background-color: #27AAE1; color: #ffffff;">
+                          <th scope="col">#</th>
+                          <th scope="col" class="sec-tb">Project</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="clickable-row" data-href="#like-service" style="cursor: pointer;">                        
+                            <th scope="row">1</th>
+                            <td class="sec-tb">Like Service</td>                        
+                        </tr>
+                        <tr class="clickable-row" data-href="#lang-aff-sc" style="background-color: #f0f8ff; cursor: pointer;">
+                          <th scope="row">2</th>
+                          <td class="sec-tb">Language Affinity Score</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="#wat-his" style="cursor: pointer;">
+                          <th scope="row">3</th>
+                          <td class="sec-tb">Watch History</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <br>
+                  <p>
+                    Once you have completed the project, please send a mail to <a href="mailto:hello@codequotient.io" class="mail-lnk">hello@codequotient.io</a> with links to your work. The specific details are mentioned within the project. If you have any questions about the project, also send an email to <a href="mailto:hello@codequotient.io" class="mail-lnk">hello@codequotient.io</a>.
+                    <br><br>
+                    Good luck!
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Project:Like Service -->
+      <div class="container project-h" id="like-service">
+        <div class="row">
+          <div class="col-12">
+            <h2>Project: Like Service</h2>         
+
+            <p>
+              <i class="head-p">Background</i>
+              <br>
+              It is common for people to signal their likes (and dislikes) for the content they consume. Not only does it provide a low friction way for people to express themselves, it’s a powerful signal that can be used to tailor content recommendations to people’s tastes.
+              <br><br>
+              Your team at Hotstar is tasked to build the functionality for viewers to Like videos and then use that signal in various recommendation solutions. You have been chosen to develop the backend service that acts as the system of record for user Likes.
+            </p>
+
+            <p class="sub-head">
+              <i class="head-p">Minimum Scope</i>
+              <br>
+              Create a microservice by using the technology of your choice. This microservice provides the following RESTful APIs:
+              <br>
+              <ul>
+                <li><i>Like. </i>This API takes a user id and video id as input. The response indicates success/failure of the API.</li>
+                <li><i>UnLike. </i>This API takes a user id and video id as input. If this user had previously liked a video, the API removes that association. The response indicates success/failure of the API.</li>
+                <li><i>Has Liked. </i>This API takes a user id and a list of video ids as input. For each video id, the response indicates whether the user has liked that video or not.</li>
+                <li><i>Likes Count. </i>This API takes a video id and returns the count of total likes it has received.
+                </li>
+              </ul>
+              Create a postman collection to interact with all the APIs you created within the microservice.
+              <br><br>
+              Create a self-contained docker image for your microservice. When this docker image is run, your service should be fully up and running and ready to interact with the postman collection you created.
+              <br><br>
+              Create a demo video that shows functioning microservice through the postman API client.
+              <br><br>
+              Share a document with the following details:
+              <ul>
+                <li>GitHub link to your microservice code.</li>
+                <li>Which database did you use and the schema of that database.</li>
+                <li>Link for the postman collection.</li>
+                <li>Link for the docker image.</li>
+                <li>Link to the demo video.</li>
+              </ul>
+            </p>
+            
+            <p class="sub-head">
+              <i class="head-p">Extra Credits</i>
+              <br>
+              You want to include a section in your application that shows the most popular videos over the last 24 hours. The popular videos are determined based on the Like activity of users and the granularity is 1 hour. For example, between 9am-10am of Aug 23, the popularity will be based on Like activity during 9am Aug 22 to 9am Aug 23. However, between 10am-11am of Aug 23, the popularity will be based on activity during 10am Aug 22 to 10am Aug 23.
+              To support this functionality, extend your microservice to include one more API:                      
+              <br>
+              <ul>
+                <li><i>Popular Videos. </i>This API returns the IDs of 5 most popular vides over the last 24 hours at the 1 hour granularity. More Likes equal to more popularity.</li>
+              </ul>
+              There are many different approaches to implement this functionality. And there are different pros and cons to each approach. To get you thinking, we have included three possibilities. They are listed in increasing order of extra credit. However, these are only suggestions and not prescriptions. You can choose any other method of your liking to implement this functionality.
+              <br><br>
+              <ul>
+                <li><i>Runtime Computation. </i>In this method, the system would compute the most popular videos within the API call. Typically, this would be done by running an aggregation query on the database where all the Like activity is stored.</li>
+                <li><i>Periodic Computation on DB. </i>In this method, you would have an offline job that runs every hour through a cron like scheduler. This job would run an aggregation query on the database to compute most popular videos over a 24 hour window and store them in a table within the DB.</li>
+                <li><i>Periodic Computation over Event Stream. </i>In this method, the microservice would publish an event to a message queue for every Like and Unlike event. You would have an offline job that runs every hour through a cron like scheduler. This job would compute the most popular videos over a 24 hour window and store them in a table within the DB.</li>
+              </ul>
+              If you implement this functionality, please do ensure that:
+              <ul>
+                <li>Your demo video includes a demo of this functionality.</li>
+                <li>Postman collection has the Popular Videos API.</li>
+                <li>Docker image contains the corresponding components like message queue and scheduler etc.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project 2: Language Affinity Score -->
+      <div class="container project-h" id="lang-aff-sc">
+        <div class="row">
+          <div class="col-12">
+            <h2>Project 2: Language Affinity Score</h2>         
+
+            <p>
+              <i class="head-p">Background</i>
+              <br>
+              At Hotstar, you are part of the team that generates video recommendations for the users. When a user visits the website (or mobile app), these recommendations are displayed to the users on the home screen. You are tasked to identify the video language a user is interested in based on the viewing history of that user. In order to solve this problem, you come up with the concept of “language affinity score”.
+              <br><br>
+              One simple method to compute this score is (number of videos viewed / number of videos presented) for a user for a given language. For example, if a user Ishan was presented with 10 videos in Hindi language, and Ishan watched 2 of those videos, Ishan’s language affinity score for Hindi would be 0.2. You can either use this simple method or go for another one that you find appropriate.
+              <br><br>
+              In order to compute this, you have access to an event stream of user activity. The event stream has two types of events. One type relates to a video being displayed to the user while the other event relates to a video being watched by a user. Here are the sample events:
+              <ul style="list-style-type:none;">
+                <li>
+                  { "user_id": 4012, "video_id": 982, "lang": "kok", "event_type": "display" }
+                </li>
+                <li>
+                  { "user_id": 9327, "video_id": 792, "lang": "ur", "event_type": "watch" }
+                </li>
+              </ul>
+              Hourly snapshots of these events are available to you <a href="https://assets.codequotient.io/hotstar/personalization/language-affinity-score/" style="text-decoration: none;">here</a>. Every hour, a new file gets created in this location whose name is of the format “events-<YYYY-MM-DD-HH>”. Here, YYYY-MM-DD-HH refers to the time at which the file was generated.
+            </p>
+
+            <p class="sub-head">
+              <i class="head-p">Minimum Scope</i>
+              <br>
+              In a technology of your choice, please implement a program that wakes up every hour and:
+              <ul>
+                <li>Discovers all the snapshot files that are available to process.</li>
+                <li>For each unprocessed file, it:</li>
+                  <ul>
+                    <li>Computes the language affinity score based on the events data.</li>
+                    <li>Stores the language affinity scores in a database of your choice.</li>
+                  </ul>
+                <li>If there is an error in processing a complete or partial events file, there is a mechanism to retry it in future.</li>
+              </ul>
+              Using cron or another scheduler, make an arrangement for periodic processing of event snapshots.
+              <br><br>
+              Create a docker image for your application. It should contain the scheduler, database, your application as well as anything else required for retry logic. Running this docker image should start the periodic run of your application.
+              <br><br>
+              Create a demo video that shows the functioning program.
+              <br><br>
+              Share a document with the following details:
+              <ul>
+                <li>GitHub link to your code.</li>
+                <li>Link to the docker image.</li>
+                <li>Which database did you use and the schema of that database.</li>
+                <li>Link to the demo video.</li>
+              </ul>
+            </p>
+
+            <p class="sub-head">
+              <i class="head-p">Extra Credits</i>
+              <br>
+              Create a microservice that provides the following API:
+              <ul>
+                <li><i>Not Interested. </i>At times, the user could watch a few videos in a language out of curiosity. So, the user should be able to tell us that he/she is not interested in a language and we should stop recommending it. This API takes user id and language name as input and stores the indication that a user is not interested in a particular language.</li>
+                <li><i>Top Categories. </i>This API takes a user id as input and it returns the list of languages with highest affinity score. This API must not return the languages that the user has explicitly marked as “Not Interested”.</li>
+              </ul>
+              Create a postman collection to interact with these APIs.
+              <br><br>
+              If you implement this functionality, please do ensure that:
+              <ul>
+                <li>Your demo video includes a demo of this functionality as well.</li>
+                <li>The GitHub link for the microservice is also included.</li>
+                <li>Docker image also has this microservice.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project 3: Watch History -->
+      <div class="container project-h" id="wat-his" style="margin-bottom: 3%;">
+        <div class="row">
+          <div class="col-12">
+            <h2>Project 3: Watch History</h2>
+
+            <p>
+              <i class="head-p">Background</i>
+              <br>
+              Hotstar’s web and mobile applications generate telemetry data about people’s video watching activity. The key event of interest is the “progress” event. When a user is watching a video, this event is generated by the client applications every 30 seconds. The event contains video id, user id, total video duration in seconds and the watched video duration in seconds. Here is a sample video stream:
+              <ul style="list-style-type:none;">
+                <li>{ "user_id": 802, "video_id": 31, "duration": 5484, "elapsed_duration": 120 }</li>
+                <li>{ "user_id": 966, "video_id": 26, "duration": 6243, "elapsed_duration": 120 }</li>
+                <li>{ "user_id": 153, "video_id": 66, "duration": 1725, "elapsed_duration": 0 }</li>
+              </ul>
+              In the real world, the client will not send the user_id in the events. Instead, the server will resolve it based on the auth & sessionization mechanisms. However, for the sake of this project, we’ll make the simplification to send user_id in the event itself.
+              <br><br>
+              There are several ways to use this data. The first use case is to allow a user to see his/her “Watch History”. This is essentially a screen where a user can see the videos he/she watched in a reverse chronological order. You are tasked to build the backend components to consume this data as well as to build a microservice for fetching user’s “Watch History”.
+            </p>
+
+            <p class="sub-head">
+              <i class="head-p">Minimum Scope</i>
+              <br>
+              Create a backend system that supports the following functionality:
+              <ul>
+                <li><i>Ingestion: </i>Provides an API to receive the telemetry data about the watching activity of the users.</li>
+                <li><i>History: </i>Provide an API that takes a user_id as input and returns the watching activity of the user. The watching activity is in reverse chronological order. Each item within the history has three pieces of information: video_id, duration of video that the user already watched (in seconds) and the time at which the user stopped watching the video.</li>
+                <li><i>Edit History: </i>At times, people want to modify their watch history to remove certain videos. Provide an API that takes a user_id and video_id as input. This API would exclude the video_id from the given user’s watch history for all future calls. This would hold true even if the user re-watches the video in future.</li>
+              </ul>
+              While this could be implemented as a single monolith application, that approach is not scalable. We recommend you to make appropriate use of message queues and various offline processing techniques to create a scalable solution.
+              <br><br>
+              We have made a few sample events available to your development. They are available <a href="https://assets.codequotient.io/hotstar/personalization/watch-history/events" style="text-decoration: none;">here</a>. Feel free to make use of these or generate your own synthetic events.
+              <br><br>
+              Create a postman collection to interact with all the APIs you created.
+              <br><br>
+              Create a self-contained single docker image for the entire backend. When this docker image is run, all components of your system should be fully up and running and ready to interact with the postman collection you created.
+              <br><br>
+              Create a demo video that shows a functioning system through the postman API client.
+              <br><br>
+              Share a document with the following details:
+              <ul>
+                <li>GitHub link to your code.</li>
+                <li>Which database did you use and the schema of that database.</li>
+                <li>Did you use a message queue? If yes, include the schema of your message(s).</li>
+                <li>Link for the postman collection.</li>
+                <li>Link for the docker image.</li>
+                <li>Link for the demo video.</li>
+              </ul>
+            </p>
+
+            <p class="sub-head">
+              <i class="head-p">Extra Credits</i>
+              <br>
+              After the successful launch of Watch History, the product team wants to launch another feature called “Continue Watching” based on the same telemetry data. If a user started watching a video but stopped midway and exited, that video will be presented to the user under “Continue Watching” heading on the home screen.
+              <br><br>
+              You are tasked to introduce a new API that takes user_id as input and it returns one video_id for the “Continue Watching” section. If there are no partially-watched videos in the history, the API does not return any video_id. If there are multiple partially-watched videos, the API tries to pick the one that user is most likely to continue watching.
+              <br><br>
+              If there are multiple partially-watched videos, there are several ways to pick only one. Our objective is to present the video that the user is most likely to continue watching. This could be based on several factors like time (partially-watched an hour ago vs a year ago), %age watched (the user finished watching 10% vs 90% of the video), popularity (less popular videos vs the most popular ones). We encourage you to devise your own method for the same.
+              <br><br>
+              If you implement this functionality, please do ensure that the docker image, postman collection, demo video, github link etc include this functionality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+      <p>&copy by CodeQuotient</p>
+    </footer>   
+
+    <!-- Scroll to top arrow -->
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <!-- JQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script>
+
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="../js/scripts.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
